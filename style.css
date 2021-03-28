@@ -1,0 +1,258 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    z-index: 1;
+}
+header .logo img {
+    max-width: 150px;
+}
+.navigation {
+    display: flex;
+}
+.navigation li {
+    list-style: none;
+    margin: 0px 13px;
+    
+}
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    
+    
+}
+.navigation li a:hover {
+    color: rgb(155, 149, 149);
+    transition: 0.8s;
+
+}
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    z-index: 1;
+}
+.search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color:white ;
+    background: transparent;
+    border: 1px solid rgba(255, 255,255, 0.5);
+    /* outline: none; */
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+}
+.search input::placeholder {
+    color: #fff;
+    letter-spacing: 1px;
+}
+.search .fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color: white;
+    left: 10px;
+    bottom: 2px;
+    border-right: 1px solid white;
+    backdrop-filter: blur(10px);
+
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+
+}
+.banner .bg {
+    position:absolute;
+    /* top: 20%;
+    left: 44%; */
+    /* width: 80%;
+    height: 80%;
+    top: 20%; */
+    /* right: 10%; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 510px;
+}
+.title {
+    max-width: 150px;
+    z-index: 1;
+}
+.banner .content h4 {
+    color: rgb(179, 175, 175);
+    font-weight: 500;
+}
+.banner .content h4 span {
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255,255, 0.5)
+}
+.banner .content h4 span:first-child {
+    padding-left: 0;
+
+}
+.banner .content h4 span:last-child {
+    border-right: none;
+}
+.content h4 span i {
+    background-color: red;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 8px;
+    font-style: normal;
+}
+.banner .content p {
+    font-size: 18px;
+    font-weight:580;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 10px 0 20px;
+    text-justify: inter-word;
+}
+.banner .content .buttons a{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 20px;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+}
+.banner .content .buttons a:nth-child(2) {
+    background: black;
+}
+.banner .content .buttons a:hover:nth-child(2) {
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+}
+.play {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding-top: 50px;
+    bottom: 25px;
+}
+.play img {
+    max-width:40px;
+    top: 50%;
+    margin-right: 10px;
+}
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active {
+    visibility: visible;
+    opacity: 1;
+}
+.trailer video {
+    max-width: 900px;
+    
+    outline: none;
+}
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+@media(max-width:990px) {
+   header {
+        padding: 20px 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        }
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            justify-content: center;   
+            }
+            .banner {
+                /* position: relative;
+                width: 100%;
+                min-height: 100vh; */
+                padding: 100px 50px;
+                
+                
+            }
+            .banner .play {
+                left: 50px;
+                font-size: 1em;
+
+            }
+            .banner .title img {
+                max-height: 50px;
+            }
+            .play img {
+                margin-right: 10px;
+                max-width: 40px;
+            }
+            .content {
+                margin-top: 90px;
+            }
+            .trailer video {
+                max-width: 90%;
+            }
+}
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fight Club | Netflix</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="media/logo.png" ></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Watchlist</a></li></ul>
+            <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="media/bg1.png" class="bg">
+            <div class="content">
+                <img src="media/title.png" class="title">
+                <h4>
+                    <span>1999</span>
+                    <span><i>18+</i></span>
+                    <span>2h 31m</span>
+                    <span>Drama/Dark comedy</span>
+                    
+                </h4>
+                <p>Discontented with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. The project soon spirals down into something sinister.</p>
+                <div class="buttons">
+                    <a href="#" ><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                    <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My List</a>
+                </div>
+            </div>
+             <div class="play" onclick="togglevid();"> <img src="media/play.png"> 
+                <p> Watch Trailer</p> 
+            </div>
+               <div class="trailer">
+                   <video src="media/Fight Club.mp4" controls="true" ></video>
+                   <img src="media/close.png" class="close" onclick="togglevid();">
+               </div>
+               <script>
+                   function togglevid() {
+                       const trailer = document.querySelector('.trailer');
+                       const video = document.querySelector('video');
+                       trailer.classList.toggle('active');
+                       video.currentTime=0;
+                       video.pause();
+                       
+
+
+                   }
+               </script>
+            
+    
+    
+</body>
+</html>
